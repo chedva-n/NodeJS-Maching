@@ -7,5 +7,7 @@ class machingRepository{
  async getDetails(){
     return await Maching.find({});
  }
-
+async update(id,update_target){
+   return await Maching.findByIdAndUpdate(id,update_target);
+}
 }module.exports = new machingRepository();

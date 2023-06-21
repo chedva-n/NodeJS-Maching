@@ -4,10 +4,11 @@ class DonationRepository{
     constructor(){
 
     }
-     create(donation) {
+   async  create(donation) {
         let data = {};
         try {
-            data =  Donation.create(donation);
+            data = await Donation.create(donation);
+            console.log("create!!!!!");
         } catch(err) {
           //  logger.error('Error::' + err);
           console.log("erorr");
@@ -16,3 +17,4 @@ class DonationRepository{
     }
     
 }
+module.exports = new DonationRepository();

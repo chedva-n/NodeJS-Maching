@@ -4,7 +4,7 @@
   "description": "",
   "main": "maching.js",
   "scripts": {
-    "start": "node machingServer.js",
+    "start": "nodemon machingServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

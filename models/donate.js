@@ -6,7 +6,6 @@ const donateSchema = mongoose.Schema({
  name:String,
  group:Number,
  target:Number
-
 })
 const Donate = mongoose.model('donates', donateSchema);
 module.exports=Donate;
