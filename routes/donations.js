@@ -4,21 +4,24 @@ const app = express();
 
 const donationService = require('../services/donationSrvice');
 const router = express.Router();
-let maxId=6;
+let maxId=8;
 router.get('/', async (req, res, next) => {
     let allDonations = await donationService.getAll();
-    console.log(allDonations.length);
     res.json(allDonations);
 
 })
 router.post('/', async (req, res) => {
     if (req.body) {
-        req.body._id=++maxId;
+     //   req.body._id=++maxId;
         await donationService.create(req.body);
-        console.log('new donation!!!!!!!!!!!!');
-       // logger('new donation!!!!!!!!!!!!');
+        console.log(`A donation of ${req.body.sum}$`);
         res.json(req.body)
     }
-    //   await  donationService.create(req.body);
 });
+
+router.get('/:donate_id', async (req, res, next) => {
+    const { donate_id } = req.params;
+        const get_donation = await donationService.getById(donate_id);
+        res.json(get_donation);
+})
 module.exports = router;

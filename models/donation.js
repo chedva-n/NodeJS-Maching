@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 //תרומה
 const donationSchema = mongoose.Schema({
-    _id:Number,
-    donate_name: String,
+    name:String,
+    donate_id: Number,
     sum: Number,
 })
 const Donation = mongoose.model('donations', donationSchema);

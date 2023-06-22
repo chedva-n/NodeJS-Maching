@@ -15,7 +15,7 @@ app.use(express.json());//the middleware will ensure that all body is loaded (mo
 app.use('/api/donations',donations);
 app.use('/api/donates',donates);
 app.use('/api/groups',groups);
-app.use('/api/maching',maching);
+app.use('/api/machings',maching);
 
 app.use((err, req, res, next) => {
     console.error(err.stack)

@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const mashingSchema = mongoose.Schema({
-    _id:String,
+    _id:Number,
     manager: String,
     password:String,
-    date: Date,
+     date: Date,
     target: Number,
     hour: String
 })
