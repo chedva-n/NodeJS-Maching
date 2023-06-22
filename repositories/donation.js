@@ -8,10 +8,9 @@ class DonationRepository{
         let data = {};
         try {
             data = await Donation.create(donation);
-            console.log("create donetion!!!!!");
+            console.log("create donetion!!!!");
         } catch(err) {
-          //  logger.error('Error::' + err);
-          console.log("erorr");
+          console.log("Something went wrong on the way, try again");
         }
         return data;
     }
@@ -19,8 +18,8 @@ class DonationRepository{
     async getById(donate_id){
         const filter = { donate_id: donate_id };
         const projection = {};
-        const outcast = await Donation.find(filter, projection); 
-        return outcast;
+        const donation = await Donation.find(filter, projection); 
+        return donation;
     }
 }
 module.exports = new DonationRepository();

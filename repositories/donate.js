@@ -22,7 +22,7 @@ class DonateRepository {
             return updatedDonate;
         } catch (error) {
             console.error(error);
-            throw new Error('Failed to update the campaign');
+            throw new Error('We are exploiting but were unable to update your target');
         }
     }
     

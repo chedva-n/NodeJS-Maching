@@ -7,7 +7,7 @@ class  DonateService {
     async getById(id){
         return await DonateRepository.getById(id);
     }
-
+    
     async update(id,update_target){
         return await DonateRepository.update(id,update_target);
     }

@@ -16,7 +16,7 @@ class machingRepository {
          return updatedCampaign;
      } catch (error) {
          console.error(error);
-         throw new Error('Failed to update the campaign');
+         throw new Error('We are exploiting but were unable to update your campaign');
      }
 
    }
