@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const donationSchema = mongoose.Schema({
     name:String,
     donate_id: Number,
+    group_id:Number,
     sum: Number,
 })
 const Donation = mongoose.model('donations', donationSchema);
